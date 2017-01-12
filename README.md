@@ -70,6 +70,10 @@ This will start the python server on your machine and it will be accessible by m
 
 Open the app and insert your IP address on the upper app menu (you can check this by typing `ipconfig` on your command prompt). After that, send an example request to your simulated drone. If everything is set correctly, your drone should arrive at your position, deliver the package and return to its home location.
 
+## Single antenna channel switching support
+
+The original server code (located inside the Server folder) has support only for one drone at a time (by using preconfigured and paired antennas that connect one to one from the PC to the drone), however in case you want to use a single antenna to control a whole fleet of drones, please refer to the code inside the `antenna/code` folder. A readme is also included that shows how to run the server and how the system operates.
+
 ## Built With
 
 * Android Studio
