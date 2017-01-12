@@ -20,7 +20,8 @@ The fields in the table are:
  
  `available` - A field indicating whether a drone is available or not. If this is set to `1`, it means that the drone is ready to fly and can be selected from the application at random, otherwise if this is set to `0`, the drone will be excluded from the application. Additionally, once a drone has been picked by the server to perform its operation, the `available` field of that drone will be set to `0` so that in the next mission, the drone is excluded.
  
- # Server
+ 
+### Server
 
 The Server runs on port 8080 and accepts commands directly from the Android app. Once a request is accepted from the application, a drone is chosen randomly from the databse, the NetID of the sending antenna is switched to match that of the drone and then the flight plan is sent to the drone. Upon completion, the drone is marked as not available in the database.
 
@@ -29,7 +30,7 @@ To start the server, please install all the prerequisite applications from the m
 `python server.py`
 
 
- # To-do:
+### To-do:
 
 1. Figure out a better timing for the serial commands to be sent as sometimes it misses an update.
 2. Make the NetID change request asynchronously so that the application does not hang while it updates the NetID to a new one.
